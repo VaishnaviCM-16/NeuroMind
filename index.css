@@ -1,0 +1,315 @@
+@import "tailwindcss";
+
+/* Custom Tailwind v4 Variant for Light Mode */
+@custom-variant light (&:where(.light, .light *));
+
+.module-transition {
+  animation: module-enter 200ms ease-out;
+}
+
+@keyframes module-enter {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .module-transition {
+    animation: none;
+  }
+}
+
+/* Custom Sleek Dark & Cyan Scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #050507;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1e293b;
+  border-radius: 4px;
+  border: 1px solid rgba(6, 182, 212, 0.3);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #0891b2;
+}
+
+/* Light Theme overrides for root html */
+html.light ::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+html.light ::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border: 1px solid rgba(14, 165, 233, 0.4);
+}
+
+html.light ::-webkit-scrollbar-thumb:hover {
+  background: #0284c7;
+}
+
+/* Global scrollbar support */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #1e293b #050507;
+}
+
+html.light * {
+  scrollbar-color: #cbd5e1 #f1f5f9;
+}
+
+/* ==========================================================================
+   LIGHT MODE HIGH-CONTRAST ELEGANT DESIGN SYSTEM
+   Preserves dark mode completely while making light mode super clean,
+   readable, and vibrant with proper WCAG AA contrast throughout all sections.
+   ========================================================================== */
+
+html.light {
+  color-scheme: light;
+}
+
+html.light body {
+  background-color: #f8fafc !important;
+  color: #0f172a !important;
+}
+
+/* Force light mode text elements to dark slate for crisp visibility */
+html.light h1,
+html.light h2,
+html.light h3,
+html.light h4,
+html.light h5,
+html.light h6,
+html.light p,
+html.light span,
+html.light li,
+html.light label {
+  color: inherit;
+}
+
+/* Specific text overrides in Light Mode (only for generic text, NOT buttons) */
+html.light p:not([class*="bg-"]),
+html.light span:not([class*="bg-"]):not(.text-white),
+html.light div:not([class*="bg-"]) {
+  color: inherit;
+}
+
+html.light .text-slate-100 {
+  color: #0f172a;
+}
+
+html.light .text-slate-200 {
+  color: #1e293b;
+}
+
+html.light .text-slate-300 {
+  color: #334155;
+}
+
+html.light .text-slate-400 {
+  color: #475569;
+}
+
+html.light .text-slate-500 {
+  color: #64748b;
+}
+
+/* Ensure white text inside colored buttons and badges stays white in light mode */
+html.light button.bg-cyan-600,
+html.light button.bg-cyan-500,
+html.light button.bg-indigo-600,
+html.light button.bg-emerald-600,
+html.light button.bg-slate-900,
+html.light button.bg-slate-800,
+html.light .text-white-forced {
+  color: #ffffff !important;
+}
+
+/* Main Canvas & Dark Containers in Light Mode */
+html.light .bg-\[\#050507\],
+html.light .bg-\[\#08080a\],
+html.light .bg-\[\#0a0a0d\],
+html.light .bg-\[\#020617\],
+html.light .bg-black,
+html.light .bg-slate-950,
+html.light .bg-slate-900,
+html.light .bg-slate-900\/50,
+html.light .bg-slate-900\/60,
+html.light .bg-slate-900\/80,
+html.light .bg-slate-900\/90,
+html.light .bg-slate-950\/50,
+html.light .bg-slate-950\/80,
+html.light .bg-slate-950\/90 {
+  background-color: #ffffff !important;
+  color: #0f172a !important;
+  border-color: #e2e8f0 !important;
+}
+
+/* Match all opacity variations of dark backgrounds in Light Mode */
+html.light [class*="bg-[#050507]"],
+html.light [class*="bg-[#08080a]"],
+html.light [class*="bg-[#0a0a0d]"],
+html.light [class*="bg-slate-950"],
+html.light [class*="bg-slate-900"] {
+  background-color: #ffffff !important;
+  color: #0f172a !important;
+  border-color: #e2e8f0 !important;
+}
+
+/* Light Mode Banner Gradients */
+html.light [class*="bg-gradient-to"],
+html.light .from-slate-900,
+html.light .from-slate-950 {
+  background-image: linear-gradient(to right, #f0f9ff, #e0f2fe, #f1f5f9) !important;
+  border-color: #cbd5e1 !important;
+  color: #0f172a !important;
+}
+
+html.light [class*="bg-gradient-to"] h1,
+html.light [class*="bg-gradient-to"] h2,
+html.light [class*="bg-gradient-to"] h3,
+html.light [class*="bg-gradient-to"] p,
+html.light [class*="bg-gradient-to"] span:not(.text-cyan-400):not(.text-cyan-300) {
+  color: #0f172a !important;
+}
+
+/* Ensure text clip gradients in light mode are crisp and high contrast */
+html.light .bg-clip-text {
+  background-color: transparent !important;
+  background-image: linear-gradient(to right, #0284c7, #4338ca) !important;
+  -webkit-background-clip: text !important;
+  background-clip: text !important;
+}
+
+/* Inner Light Mode Badges & Code Blocks */
+html.light pre,
+html.light code {
+  background-color: #f1f5f9 !important;
+  color: #0284c7 !important;
+  border-color: #cbd5e1 !important;
+}
+
+/* Borders in Light Mode */
+html.light [class*="border-white"],
+html.light [class*="border-slate-800"],
+html.light [class*="border-slate-900"] {
+  border-color: #cbd5e1 !important;
+}
+
+/* Accent Text & Backgrounds for Light Mode */
+html.light .text-cyan-400,
+html.light .text-cyan-300,
+html.light .text-cyan-200 {
+  color: #0284c7 !important; /* Sky 600 - crisp, readable blue/cyan in light mode */
+}
+
+html.light [class*="bg-cyan-950"] {
+  background-color: #f0f9ff !important;
+  border-color: #bae6fd !important;
+  color: #0369a1 !important;
+}
+
+/* Indigo Accent Text & Backgrounds */
+html.light .text-indigo-400,
+html.light .text-indigo-300 {
+  color: #4338ca !important; /* Indigo 700 */
+}
+
+html.light [class*="bg-indigo-950"] {
+  background-color: #eef2ff !important;
+  border-color: #c7d2fe !important;
+  color: #3730a3 !important;
+}
+
+/* Emerald Accent Text & Backgrounds */
+html.light .text-emerald-400,
+html.light .text-emerald-300 {
+  color: #047857 !important; /* Emerald 700 */
+}
+
+html.light [class*="bg-emerald-950"] {
+  background-color: #ecfdf5 !important;
+  border-color: #a7f3d0 !important;
+  color: #065f46 !important;
+}
+
+/* Purple Accent Text & Backgrounds */
+html.light .text-purple-400,
+html.light .text-purple-300 {
+  color: #6b21a8 !important; /* Purple 700 */
+}
+
+html.light [class*="bg-purple-950"] {
+  background-color: #faf5ff !important;
+  border-color: #e9d5ff !important;
+  color: #581c87 !important;
+}
+
+/* Amber Accent Text & Backgrounds */
+html.light .text-amber-400,
+html.light .text-amber-300 {
+  color: #b45309 !important; /* Amber 700 */
+}
+
+html.light [class*="bg-amber-950"] {
+  background-color: #fffbeb !important;
+  border-color: #fde68a !important;
+  color: #78350f !important;
+}
+
+/* Rose Accent Text & Backgrounds */
+html.light .text-rose-400,
+html.light .text-rose-300 {
+  color: #be123c !important; /* Rose 700 */
+}
+
+html.light [class*="bg-rose-950"] {
+  background-color: #fff1f2 !important;
+  border-color: #fecdd3 !important;
+}
+
+/* Header styling in light mode */
+html.light header {
+  background-color: rgba(255, 255, 255, 0.95) !important;
+  border-color: #cbd5e1 !important;
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.05) !important;
+}
+
+/* Modals & Popups in Light Mode */
+html.light .fixed [class*="bg-[#08080a]"],
+html.light .fixed [class*="bg-[#050507]"] {
+  background-color: #ffffff !important;
+  border-color: #cbd5e1 !important;
+  color: #0f172a !important;
+}
+
+/* Button & Card Shadow Adjustments for Light Mode */
+html.light .shadow-2xl,
+html.light .shadow-xl {
+  box-shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.08), 0 8px 10px -6px rgba(15, 23, 42, 0.04) !important;
+}
+
+/* Input fields in Light Mode */
+html.light input,
+html.light textarea,
+html.light select {
+  background-color: #ffffff !important;
+  color: #0f172a !important;
+  border-color: #cbd5e1 !important;
+}
+
+html.light input::placeholder,
+html.light textarea::placeholder {
+  color: #94a3b8 !important;
+}

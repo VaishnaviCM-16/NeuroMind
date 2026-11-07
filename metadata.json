@@ -1,0 +1,6 @@
+{
+  "name": "NeuroMind",
+  "description": "An advanced interactive Neuro-AI learning platform featuring full-stack account authentication, interactive 3D anatomical brain simulations, mind maps from scratch to advanced level, 3D motion visualizers, BCI signal processing, and an intelligent AI chatbot.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
