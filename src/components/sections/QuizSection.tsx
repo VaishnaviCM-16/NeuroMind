@@ -1,4 +1,4 @@
-src/components/sections/QuizSection.tsximport React, { useState } from 'react';
+import React, { useState } from 'react';
 import { QUIZ_QUESTIONS } from '../../data/quizData';
 import { QuizQuestion } from '../../types';
 import confetti from 'canvas-confetti';
