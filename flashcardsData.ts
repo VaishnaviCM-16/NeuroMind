@@ -1,4 +1,4 @@
-import { Flashcard } from '../types';
+src/data/flashcardsData.tsimport { Flashcard } from '../types';
 
 export const FLASHCARDS_DATA: Flashcard[] = [
   {
