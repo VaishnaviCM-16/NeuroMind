@@ -1,4 +1,4 @@
-import { QuizQuestion } from '../types';
+src/data/quizData.tsimport { QuizQuestion } from '../types';
 
 export const QUIZ_QUESTIONS: QuizQuestion[] = [
   {
