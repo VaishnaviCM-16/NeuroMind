@@ -38,6 +38,12 @@ Without a Gemini key, the app and its non-AI APIs still run; chat responds with 
 
 Learning modules and the account dialog load on demand instead of being included in the initial page download. The initial JavaScript bundle is about 261 KB (about 80 KB gzipped); 3D and other learning modules are downloaded when opened.
 
+## Screenshots
+
+![Screenshot 1](home-page.png)
+![Screenshot 2](lessons.png)
+![Screenshot 3](light-mode.png)
+
 ## Production build
 
 ```sh
