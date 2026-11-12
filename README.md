@@ -40,9 +40,9 @@ Learning modules and the account dialog load on demand instead of being included
 
 ## Screenshots
 
-![home-page screenshot](./home-page.png)
-![lessons screenshot](./lessons.png)
-![light-mode screenshot](./light-mode.png)
+![home-page screenshot](./home-page.jpeg)
+![lessons screenshot](./lessons.jpeg)
+![light-mode screenshot](./light-mode.jpeg)
 
 ## Production build
 
